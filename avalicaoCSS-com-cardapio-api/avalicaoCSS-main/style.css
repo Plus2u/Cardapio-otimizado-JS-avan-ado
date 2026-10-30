@@ -1,0 +1,245 @@
+/* Burger Fast Food — identidade visual */
+:root {
+  --color-bg: #11100e;
+  --color-panel: #1d1b18;
+  --color-panel-soft: #26231f;
+  --color-text: #f7f3ed;
+  --color-muted: #c9c1b6;
+  --color-accent: #ffb703;
+  --color-accent-dark: #e09a00;
+  --color-red: #e6392f;
+  --radius: 18px;
+  --shadow: 0 14px 36px rgba(0,0,0,.28);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--color-text);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.6;
+  background:
+    linear-gradient(rgba(15, 13, 11, .84), rgba(15, 13, 11, .9)),
+    url("background-2045379_960_720.jpg") center / cover fixed;
+}
+header { position: relative; z-index: 10; }
+.navbar {
+  padding: .65rem clamp(1rem, 3vw, 2.5rem);
+  background: rgba(16, 15, 13, .96) ;
+  border-bottom: 1px solid rgba(255,183,3,.22);
+  box-shadow: 0 8px 24px rgba(0,0,0,.22);
+}
+.navbar .container-fluid { gap: 1.25rem; }
+.navbar-brand { margin-right: 1rem; }
+.navbar-brand img {
+  display: block;
+  width: auto;
+  height: 76px;
+  max-width: 180px;
+  object-fit: contain;
+}
+.navbar-nav { gap: .35rem; align-items: center; }
+.navbar-nav .nav-link {
+  color: #f8f4ed;
+  font-family: inherit;
+  font-size: .98rem;
+  font-weight: 700;
+  padding: .65rem .9rem;
+  border-radius: 999px;
+  transition: color .2s ease, background .2s ease, transform .2s ease;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link.active {
+  color: #19140a;
+  background: var(--color-accent);
+  transform: translateY(-1px);
+}
+.navbar-toggler { border-color: rgba(255,255,255,.35); }
+main { width: min(1200px, calc(100% - 2rem)); margin: 2rem auto 4rem; }
+main > .row { --bs-gutter-x: 1.4rem; --bs-gutter-y: 1.4rem; }
+.card {
+  height: 100%;
+  overflow: hidden;
+  color: var(--color-text);
+  background: linear-gradient(145deg, rgba(38,35,31,.98), rgba(25,23,20,.98));
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255,183,3,.5);
+  box-shadow: 0 20px 42px rgba(0,0,0,.38);
+}
+.card > img,
+.card-img-top {
+  display: block;
+  width: 100%;
+  height: clamp(210px, 24vw, 300px);
+  object-fit: cover;
+  background: #2a2722;
+}
+.card .card-body { padding: 1.35rem; }
+.card .card-title { color: #fff; font-size: clamp(1.2rem, 2vw, 1.55rem); font-weight: 800; margin-bottom: .65rem; }
+.card .card-text { color: var(--color-muted); }
+.card .card-text strong { color: var(--color-accent); font-size: 1.1rem; }
+.card.mb-3 { margin-inline: auto; max-width: 980px; }
+.card.mb-3 > img { height: clamp(240px, 38vw, 460px); }
+.card.mb-3 .card-title h1,
+.card.mb-3 h1 { color: var(--color-accent); font-weight: 900; line-height: 1.15; }
+.card.mb-3 .card-body { padding: clamp(1.25rem, 4vw, 2.5rem); }
+.btn {
+  font-weight: 750;
+  border-radius: 999px;
+  padding: .65rem 1.05rem;
+  transition: transform .2s ease, background-color .2s ease, box-shadow .2s ease;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-comprar {
+  color: #17120a;
+  background: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  animation: none;
+}
+.btn-comprar:hover, .btn-comprar:focus {
+  color: #17120a;
+  background: #ffd166;
+  border-color: #ffd166;
+  box-shadow: 0 6px 18px rgba(255,183,3,.25);
+}
+.btn-dark {
+  color: #f8f4ed ;
+  background: #39352f ;
+  border-color: #514b42 ;
+}
+.btn-dark:hover { background: #514b42 ; }
+a { text-underline-offset: 3px; }
+.card-link { color: var(--color-accent); }
+form, .form-control, .form-select {
+  color: var(--color-text);
+}
+.form-control, .form-select {
+  background-color: #211f1b;
+  border-color: #514b42;
+  border-radius: 10px;
+}
+.form-control:focus, .form-select:focus {
+  color: #fff;
+  background-color: #211f1b;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 .2rem rgba(255,183,3,.15);
+}
+img { max-width: 100%; }
+footer { color: var(--color-muted); }
+@media (max-width: 991.98px) {
+  .navbar-nav { align-items: stretch; padding: .5rem 0; }
+  .navbar-nav .nav-link { border-radius: 10px; }
+  .navbar-brand img { height: 62px; max-width: 150px; }
+}
+@media (max-width: 575.98px) {
+  main { width: min(100% - 1rem, 1200px); margin-top: 1rem; }
+  .card .card-body { padding: 1rem; }
+  .card > img, .card-img-top { height: 220px; }
+  .btn { padding: .58rem .85rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto ; animation-duration: .01ms ; transition-duration: .01ms ; }
+}
+
+
+/* Contagem regressiva das ofertas na página inicial */
+.ofertas-contagem {
+  width: min(980px, 100%);
+  margin: 0 auto 1.5rem;
+  padding: clamp(1.1rem, 3vw, 1.7rem);
+  text-align: center;
+  background: linear-gradient(135deg, rgba(38, 35, 31, .97), rgba(25, 23, 20, .97));
+  border: 1px solid rgba(255, 183, 3, .38);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.ofertas-legenda {
+  margin: 0 0 .8rem;
+  color: var(--color-text);
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  font-weight: 800;
+}
+.contador-ofertas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(.35rem, 2vw, 1rem);
+  color: var(--color-accent);
+  font-variant-numeric: tabular-nums;
+}
+.contador-unidade {
+  display: flex;
+  min-width: clamp(3.6rem, 12vw, 6rem);
+  flex-direction: column;
+  align-items: center;
+  padding: .5rem .65rem;
+  background: rgba(0, 0, 0, .24);
+  border: 1px solid rgba(255, 183, 3, .2);
+  border-radius: 12px;
+}
+.contador-unidade strong {
+  font-size: clamp(1.7rem, 6vw, 2.6rem);
+  line-height: 1.15;
+  letter-spacing: .04em;
+}
+.contador-unidade small {
+  margin-top: .25rem;
+  color: var(--color-muted);
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.contador-separador {
+  padding-bottom: 1.1rem;
+  font-size: clamp(1.4rem, 5vw, 2.2rem);
+  font-weight: 900;
+}
+@media (max-width: 380px) {
+  .contador-unidade { min-width: 0; padding: .45rem .5rem; }
+  .contador-unidade small { font-size: .62rem; }
+}
+
+/* Produtos carregados dinamicamente pela API Tech4Produtos */
+.api-produtos {
+  margin: 3rem 0 1rem;
+}
+.api-produtos-titulo {
+  margin-bottom: .35rem;
+  color: var(--color-accent);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 900;
+}
+.api-produtos-intro {
+  margin-bottom: 1.25rem;
+  color: var(--color-muted);
+}
+.api-status {
+  margin: 0 0 1.25rem;
+  padding: .9rem 1rem;
+  color: var(--color-muted);
+  background: rgba(38, 35, 31, .85);
+  border: 1px solid rgba(255, 183, 3, .25);
+  border-radius: 12px;
+}
+.api-produto-card .card-img-top {
+  height: 220px;
+  object-fit: cover;
+}
+.api-produto-descricao {
+  flex-grow: 1;
+}
+.api-produto-categoria,
+.api-produto-restaurante {
+  margin-bottom: .35rem;
+  color: var(--color-muted);
+  font-size: .9rem;
+}
+
